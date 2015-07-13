@@ -9,6 +9,11 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'Quiz' });
 });
 
+/* GET AUTHORS */
+router.get('/author', function (req,res) {
+  res.render('author', { title: 'Créditos Quiz'});
+});
+
 //si el get es hacia la cuestion pues saco la parte del controlador .question
 router.get('/quizes/question', quizController.question);
 router.get('/quizes/answer', quizController.answer);
